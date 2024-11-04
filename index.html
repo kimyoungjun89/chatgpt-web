@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그림자 맞추기 게임</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 게임 시작 화면 -->
+    <div id="start-screen">
+        <img id="start-image" src="start-image.jpg" alt="게임 시작 이미지">
+        <button id="start-button" onclick="startGame()">게임 시작</button>
+    </div>
+
+    <!-- 게임 화면 -->
+    <div id="game-screen" class="container" style="display: none;">
+        <div id="image-container">
+            <img id="shadow-image" src="" alt="그림자 이미지">
+        </div>
+        <p id="hint-text" class="hint"></p> <!-- 힌트를 표시할 요소 -->
+        <div id="answer-options">
+            <button id="option-0" class="answer-btn" onclick="checkAnswer(0)"></button>
+            <button id="option-1" class="answer-btn" onclick="checkAnswer(1)"></button>
+            <button id="option-2" class="answer-btn" onclick="checkAnswer(2)"></button>
+        </div>
+    </div>
+
+    <!-- 정답 화면 -->
+    <div id="answer-screen" style="display: none; text-align: center;">
+        <img id="answer-image" src="" alt="정답 이미지" onclick="nextQuestion()">
+        <p>정답입니다! 클릭하여 다음 문제로 넘어가세요.</p>
+    </div>
+
+    <!-- 최종 화면 -->
+    <div id="end-screen" style="display: none; text-align: center;">
+        <img id="congrats-image" src="congrats-image.jpg" alt="축하 이미지">
+        <h1>모든 문제를 맞췄습니다! 축하합니다!</h1>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
