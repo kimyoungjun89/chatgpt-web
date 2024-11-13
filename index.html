@@ -9,8 +9,10 @@
 <body>
     <!-- 게임 시작 화면 -->
     <div id="start-screen">
-        <img id="start-image" src="start-image.jpg" alt="게임 시작 이미지">
-        <button id="start-button" onclick="startGame()">게임 시작</button>
+        <div id="start-content">
+            <img id="start-image" src="start-image.jpg" alt="게임 시작 이미지">
+            <button id="start-button" onclick="startGame()">게임 시작</button>
+        </div>
     </div>
 
     <!-- 게임 화면 -->
@@ -18,7 +20,7 @@
         <div id="image-container">
             <img id="shadow-image" src="" alt="그림자 이미지">
         </div>
-        <p id="hint-text" class="hint"></p> <!-- 힌트를 표시할 요소 -->
+        <p id="hint-text" class="hint"></p>
         <div id="answer-options">
             <button id="option-0" class="answer-btn" onclick="checkAnswer(0)"></button>
             <button id="option-1" class="answer-btn" onclick="checkAnswer(1)"></button>
