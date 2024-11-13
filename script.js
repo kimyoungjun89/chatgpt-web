@@ -91,8 +91,10 @@ function nextQuestion() {
 function resetGame() {
     document.getElementById("answer-screen").style.display = "none";
     document.getElementById("game-screen").style.display = "none";
-    document.getElementById("start-screen").style.display = "block";
+    document.getElementById("end-screen").style.display = "none";
+    document.getElementById("start-screen").style.display = "flex"; // 시작 화면을 flex로 다시 설정
 }
+
 
 // 최종 화면 표시 함수
 function showEndScreen() {

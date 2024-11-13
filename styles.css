@@ -1,3 +1,4 @@
+/* 기존 스타일 초기화 */
 body, html {
     margin: 0;
     padding: 0;
@@ -8,23 +9,41 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-#start-screen, #game-screen, #end-screen {
-    text-align: center;
+/* 게임 시작 화면 스타일 */
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 세로 중앙 정렬 추가 */
+    height: 100vh; /* 화면 전체 높이 설정 */
 }
 
-#start-image, #congrats-image {
+#start-image {
     width: 200px;
     height: auto;
+    margin-bottom: 20px;
 }
 
 #start-button {
     padding: 10px 20px;
     font-size: 20px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 20px; /* 이미지와 버튼 사이 간격 */
+}
+
+/* 게임 화면 스타일 */
+#game-screen {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -33,12 +52,14 @@ body, html {
     height: 200px;
 }
 
+/* 힌트 텍스트 스타일 */
 .hint {
     font-size: 16px;
     color: gray;
     margin-bottom: 20px;
 }
 
+/* 정답 옵션 스타일 */
 #answer-options {
     display: flex;
     justify-content: center;
